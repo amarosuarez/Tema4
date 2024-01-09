@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ejercicio05 {
 
 	public static void main(String[] args) {
-		// Variable donde se almacenará los números del usuario
+		// Variable donde se almacenarán el número del usuario
 		int num;
 		
 		// Variable donde se almacenará el resultado de la suma
@@ -41,10 +41,13 @@ public class Ejercicio05 {
 		
 		// Bucle para sumar
 		for (int numero : tabla) {
+			// Calculamos la suma de todos los números
 			suma += numero;
 			
+			// Comprobamos si el número actual es mayor al número almacenado anteriormente
 			if (numero > max) max = numero;
 			
+			// Comprobamos si el número actual es menor al número almacenado anteriormente
 			if (numero < min) min = numero;
 			
 		}
