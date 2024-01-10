@@ -54,7 +54,7 @@ public class Ejercicio07 {
 		// Bucle para pintar el diagrama
 		for (int i = 0; i < tabla.length; i++) {
 			// Obtenemos el nombre del mes
-			mes = nombreMesSimple(i + 1);
+			mes = nombreMes(i + 1).substring(0, 3);
 
 			// Colocamos el nombre del mes
 			System.out.print(mes + " |");
@@ -91,30 +91,6 @@ public class Ejercicio07 {
 		case 10 -> "octubre";
 		case 11 -> "noviembre";
 		case 12 -> "diciembre";
-		};
-
-		// Devolvemos el nombre
-		return nombre;
-	}
-
-	// Función que devuelve el nombre del mes en formato simple
-	static String nombreMesSimple(int pos) {
-		// Variable dondde se almacenará el nombre
-		String nombre;
-
-		nombre = switch (pos) {
-		default -> "ene";
-		case 2 -> "feb";
-		case 3 -> "mar";
-		case 4 -> "abr";
-		case 5 -> "may";
-		case 6 -> "jun";
-		case 7 -> "jul";
-		case 8 -> "ago";
-		case 9 -> "sep";
-		case 10 -> "oct";
-		case 11 -> "nov";
-		case 12 -> "dic";
 		};
 
 		// Devolvemos el nombre
