@@ -66,7 +66,6 @@ public class Ejercicio07 {
 
 			// Pintamos un salto de línea
 			System.out.println();
-
 		}
 
 		// Cerramos el Scanner
