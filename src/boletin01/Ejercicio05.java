@@ -6,19 +6,19 @@ public class Ejercicio05 {
 
 	public static void main(String[] args) {
 		// Variable donde se almacenarán el número del usuario
-		int num;
+		double num;
 		
 		// Variable donde se almacenará el resultado de la suma
-		int suma = 0;
+		double suma = 0;
 		
 		// Variable donde se almacenará el máximo
-		int max;
+		double max;
 		
 		// Variable donde se almacenará el mínimo
-		int min;
+		double min;
 		
 		// Tabla donde se almacenarán los números del usuario
-		int[] tabla = new int[10];
+		double[] tabla = new double[10];
 		
 		// Creamos el Scanner
 		Scanner sc = new Scanner(System.in);
@@ -27,7 +27,7 @@ public class Ejercicio05 {
 		for (int i=0; i<tabla.length; i++) {
 			// Le pedimos el número al usuario y lo guardamos
 			System.out.println("Introduzca un número");
-			num = sc.nextInt();
+			num = sc.nextDouble();
 			
 			// Lo almacenamos en la tabla
 			tabla[i] = num;
@@ -40,7 +40,7 @@ public class Ejercicio05 {
 		min = tabla[0];
 		
 		// Bucle para sumar
-		for (int numero : tabla) {
+		for (double numero : tabla) {
 			// Calculamos la suma de todos los números
 			suma += numero;
 			
@@ -49,7 +49,6 @@ public class Ejercicio05 {
 			
 			// Comprobamos si el número actual es menor al número almacenado anteriormente
 			if (numero < min) min = numero;
-			
 		}
 		
 		// Mostramos la suma
