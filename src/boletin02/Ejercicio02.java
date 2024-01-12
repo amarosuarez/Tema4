@@ -17,7 +17,6 @@ public class Ejercicio02 {
 		// Variable donde se almacenará la última posición del índice
 		int ultimo = 0;
 		
-		
 		// Bucle para conocer la longitud de la tabla
 		for (int i=1; i<=10; i++) {
 			// Bucle para incrementar el contador
