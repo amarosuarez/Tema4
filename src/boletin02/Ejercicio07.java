@@ -19,14 +19,39 @@ public class Ejercicio07 {
 		// Variable donde se almacenará el número del usuario
 		int num;
 		
+		// Contador
+		int contador = 0;
+		
+		// Variable donde se almacenará el número aleatorio
+		int n;
+		
+		// Variable donde se almacenará el indice
+		int indice;
+		
 		// Creamos el Scanner
 		Scanner sc = new Scanner(System.in);
 		
 		// Bucle para generar los números aleatorios
 		for (int i=0; i<tablaAleatoria.length; i++) {
+			// Generamos el número aleatorio
+			n = (int) (Math.random() * 10 + 1);
+			indice = 0;
+			
+			do {
+				n = (int) (Math.random() * 10 +1);
+				
+				while (indice<tablaAleatoria.length && n != tablaAleatoria[indice]) {
+					indice++;
+				}
+				
+			} while (indice < tablaAleatoria.length);
+			
 			// Almacenamos el número aleatorio
-			tablaAleatoria[i] = (int) (Math.random() * 50);
+			tablaAleatoria[i] = n;
 		}
+		
+		// Ordenamos la tabla
+		Arrays.sort(tablaAleatoria);
 		
 		// Mostramos la tabla aleatoria
 		System.out.println("Tu combinación es: \n" + Arrays.toString(tablaAleatoria));
@@ -46,34 +71,20 @@ public class Ejercicio07 {
 		// Mostramos la combinación ganadora
 		System.out.println("La combinación ganadora es: \n" + Arrays.toString(tablaGanadora));
 		
-		// Comprobamos si las tablas son iguales
-		if (Arrays.equals(tablaAleatoria, tablaGanadora)) {
-			// Mostramos el mensaje ganador
-			System.out.println("¡Enhorabuena! Has acertado todos los números");
+		// Bucle para buscar el número en la ganadora
+		for (int numero : tablaGanadora) {
+			if (Arrays.binarySearch(tablaAleatoria, numero) >= 0) contador++;
+		}
+		
+		// Mostramos el número de aciertos
+		if (contador == tablaGanadora.length) {
+			System.out.println("Enhorabuena, has acertado todos los números");
 		} else {
-			// Comprobamos cuantos números ha acertado
-			System.out.println("Ha acertado " + numAciertos(tablaGanadora, tablaAleatoria) + " número/s");
+			System.out.println("Has acertado " + contador + " numero/s");
 		}
 		
 		// Cerramos el Scanner
 		sc.close();
-	}
-	
-	// Función que devuelve el número de aciertos
-	static int numAciertos(int[] tablaGanadora, int[] tablaAleatoria) {
-		// Variable que almacena el número de aciertos
-		int num = 0;
-		
-		// Bucle para comprobar cuantos números ha acertado
-		for (int i=0; i<tablaGanadora.length; i++) {
-			// Comprobamos si los números coinciden y en caso afirmativo, aumentamos el contador
-			if (tablaGanadora[i] == tablaAleatoria[i]) {
-				num++;
-			}
-		}
-		
-		// Devolvemos el números de aciertos
-		return num;
 	}
 	
 }

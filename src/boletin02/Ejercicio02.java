@@ -34,7 +34,7 @@ public class Ejercicio02 {
 			/*
 			 * La fórmula usada es la siguiente:
 			 * primero = UPR + nº iteración - 1
-			 * ultimo = UPR + nº iteración + n
+			 * ultimo = UPR + nº iteración
 			 * 
 			 * UPR = Última posición registrada
 			 */
