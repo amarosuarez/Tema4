@@ -31,29 +31,18 @@ public class Ejercicio05 {
 		// Tabla donde se almacenarán los indices
 		int tabla[];
 		
-		// Contador donde se almacenará la longitud
-		int longitud=0;
-		
-		// Bucle para conocer la longitud
-		for (int num : t) {
-			if (num == valor) longitud++;
-		}
-		
-//		// Le damos la longitud a la tabla
+		// Le damos la longitud a la tabla
 		tabla = new int[0];
 		
-		// Bucle para conocer los indices donde se encuentra el número
-//		for (int i=0; i<t.length; i++) {
-//			if (valor == t[i]) tabla[i] = i;
-//		}
 		
-		
+		// Bucle para almacenar la posición en la tabla
 		for (int i=0; i<t.length; i++) {
 			if (t[i] == valor) {
+				// Copiamos la tabla anterior con una posición más
+				tabla = Arrays.copyOfRange(tabla, 0, tabla.length+1);
 				
-				tabla = Arrays.copyOfRange(tabla, 0, i+1);
-				
-				System.err.println(Arrays.toString(tabla));
+				// Añadimos el valor en la nueva posición
+				tabla[tabla.length-1] = i;
 			}
 		}
 		
