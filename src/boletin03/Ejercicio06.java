@@ -9,7 +9,7 @@ public class Ejercicio06 {
 		int tabla[] = {10, 1, 5, 8, 9, 2};
 		
 		// Imprimimos la tabla con las sumas
-		System.out.println(Arrays.toString(suma(tabla, 3)));
+		System.out.println(Arrays.toString(suma(tabla, 2)));
 		
 	}
 	
