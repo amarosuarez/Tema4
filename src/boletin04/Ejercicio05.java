@@ -89,8 +89,7 @@ public class Ejercicio05 {
 
 	}
 
-	// Función que genera 20 números aleatorios y los almacena en una tabla
-	// bidimensional
+	// Función que genera 20 números aleatorios y los almacena en una tabla bidimensional
 	static int[][] hojaCalculo() {
 		// Creamos la tabla donde se almacenarán los datos
 		int[][] t = new int[4][5];
