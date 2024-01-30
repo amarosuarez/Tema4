@@ -48,6 +48,7 @@ public class Ejercicio02 {
 		
 		System.out.print("Notas\t\t");
 		
+		// Bucle para imprimir las asignaturas
 		for (int i = 1; i <= NUM_ASIGNATURAS; i++) {
 			System.out.print("Asignatura " + i + "\t");
 		}
