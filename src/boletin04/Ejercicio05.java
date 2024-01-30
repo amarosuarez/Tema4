@@ -15,9 +15,6 @@ public class Ejercicio05 {
 
 		// Variable donde se almacenará la suma vertical
 		int sumaVer = 0;
-		
-		// Variable donde se almacenará el total de suma horizontal
-		int totalHor = 0;
 
 		// Vamos a sumar las filas
 		// Bucle para recorrer las filas
@@ -37,9 +34,6 @@ public class Ejercicio05 {
 				} else {
 					// Colocamos la suma en la última posición horizontal
 					hoja[i][j] = sumaHor;
-					
-					// Vamos sumando los totales para usarlo luego
-					totalHor += sumaHor;
 				}
 
 			}
@@ -61,7 +55,7 @@ public class Ejercicio05 {
 				
 				// Si llega a la última posición de la tabla, realizamos la suma de los totales y la colocamos
 				if (i==hoja[0].length-1 && j==hoja.length-1) {
-					hoja[j][i] = totalHor + sumaVer;
+					hoja[j][i] = sumaVer;
 				} else if (j==hoja.length-1) {
 					// Realizamos las sumas verticales
 					hoja[j][i] = sumaVer;
