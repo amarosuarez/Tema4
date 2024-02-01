@@ -1,11 +1,23 @@
 package boletin04;
 
+/**
+ * Clase Ejercicio08
+ */
 public class Ejercicio08 {
+	
+	/**
+	 * Constructor privado
+	 */
+	private Ejercicio08() {}
 
+	/**
+	 * Método Main
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
 		// Array bidimensional
-		int[][] matrizSimetrica = 
+		final int[][] matrizSimetrica = 
 			{ 
 				{ 1, 2, 3, 4 }, 
 				{ 2, 5, 6, 7 }, 
@@ -17,9 +29,12 @@ public class Ejercicio08 {
 
 	}
 
-	// Función que recibe un array bidimensional y devuelve un booleano que indica
-	// si es simétrica o no
-	static boolean esSimetrica(int[][] t) {
+	/**
+	 * Función que recibe un array bidimensional y devuelve un booleano que indica
+	 * @param tabla Tabla bidimensional
+	 * @return Devuelve si es simétrica o no
+	 */
+	static boolean esSimetrica(int[][] tabla) {
 		// Variable donde se almacenará si es simétrica o no
 		boolean simetrica = true;
 
@@ -29,13 +44,13 @@ public class Ejercicio08 {
 		// Variable para contar las columnas
 		int columnas = 0;
 
-		while (filas < t.length) {
+		while (filas < tabla.length) {
 
 			
-			while (columnas < t[filas].length) {
+			while (columnas < tabla[filas].length) {
 
 				
-				if (t[filas][columnas] != t[columnas][filas]) {
+				if (tabla[filas][columnas] != tabla[columnas][filas]) {
 					simetrica = false;
 					break;
 				}
@@ -48,13 +63,13 @@ public class Ejercicio08 {
 		}
 
 		// Bucle para recorrer las filas
-		for (int i = 0; i < t.length; i++) {
+		for (int i = 0; i < tabla.length; i++) {
 
 			// Bucle para recorrer las columnas
-			for (int j = 0; j < t[i].length; j++) {
+			for (int j = 0; j < tabla[i].length; j++) {
 
 				// Comparamos
-				if (t[i][j] != t[j][i]) {
+				if (tabla[i][j] != tabla[j][i]) {
 					simetrica = false;
 					break;
 				}
