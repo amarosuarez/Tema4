@@ -94,7 +94,7 @@ public class Ejercicio09 {
 			suma = 0;
 		}
 
-		// Devolvemos el boolean
+		// Devolvemos el booleano
 		return magica;
 	}
 
