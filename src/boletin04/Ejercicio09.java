@@ -11,7 +11,8 @@ public class Ejercicio09 {
 				{ 1, 1, 1 }, 
 				{ 1, 1, 1 } 
 			};
-
+		
+		// Llamamos a la función y lo imprimimos
 		System.out.println(esMagica(t));
 
 	}
@@ -41,29 +42,40 @@ public class Ejercicio09 {
 				suma += tabla[i][j];
 			}
 			
-			
+			// Le damos a la variable sumaAnterior el valor de la suma total de la primera fila
 			sumaAnterior = suma;
+			
+			// Reiniciamos el valor de la suma
 			suma = 0;
 		}
 		
 		// Bucle para comprobar las sumas de las filas
 		while (contadorFilas < tabla.length) {
 			
+			// Ejecutamos mientras no se llegue al final de la tabla
 			while (contadorColumnas < tabla[contadorFilas].length) {
-
+				// Sumamos los valores
 				suma += tabla[contadorFilas][contadorColumnas];
+				
+				// Incrementamos el valor del contador
 				contadorColumnas++;
 
 			}
 			
+			// Comprobamos si la suma es diferente a la anterior
 			if (suma != sumaAnterior) {
+				// Colocamos false y salimos del bucle
 				magica = false;
 				break;
 			}
 			
+			// Le damos a la variable sumaAnterior el valor de la suma total de la fila
 			sumaAnterior = suma;
 			
+			// Aumentamos el contador de filas
 			contadorFilas++;
+			
+			// Reiniciamos el contador de columnas y la suma
 			contadorColumnas = 0;
 			suma = 0;
 			
@@ -74,22 +86,32 @@ public class Ejercicio09 {
 		
 		// Bucle para comprobar la sumas de las columnas
 		while (magica && contadorColumnas < tabla[0].length) {
-			
+		
+			// Ejecutamos mientras no lleguemos al final de la fila
 			while (contadorFilas < tabla.length) {
-
+				
+				// Sumamos los valores
 				suma += tabla[contadorFilas][contadorColumnas];
+				
+				// Incrementamos el contador de las filas
 				contadorFilas++;
 
 			}
 			
+			// Comprobamos si la suma es diferente a la anterior
 			if (suma != sumaAnterior) {
+				// Colocamos en false y salimos del bucle
 				magica = false;
 				break;
 			}
 			
+			// Le damos a la variable sumaAnterior el valor de la suma total de la fila
 			sumaAnterior = suma;
 			
+			// Aumentamos el contador de las columnas
 			contadorColumnas++;
+			
+			// Reiniciamos el contador de las filas y la suma
 			contadorFilas = 0;
 			suma = 0;
 		}
