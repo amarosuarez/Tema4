@@ -7,9 +7,9 @@ public class Ejercicio09 {
 		// Tabla mágica
 		int[][] t = 
 			{ 
-				{ 1, 1, 1 }, 
-				{ 1, 1, 1 }, 
-				{ 1, 1, 1 } 
+				{ 4, 9, 2 }, 
+				{ 3, 5, 7 }, 
+				{ 8, 1, 6 } 
 			};
 		
 		// Llamamos a la función y lo imprimimos
@@ -36,18 +36,15 @@ public class Ejercicio09 {
 		int contadorColumnas = 0;
 
 		// Bucle para obtener el valor de la primera suma de la primera fila
-		for (int i = 0; i < 1; i++) {
-			
-			for (int j = 0; j < tabla[i].length; j++) {
-				suma += tabla[i][j];
-			}
-			
-			// Le damos a la variable sumaAnterior el valor de la suma total de la primera fila
-			sumaAnterior = suma;
-			
-			// Reiniciamos el valor de la suma
-			suma = 0;
+		for (int j = 0; j < tabla[0].length; j++) {
+			suma += tabla[0][j];
 		}
+		
+		// Le damos a la variable sumaAnterior el valor de la suma total de la primera fila
+		sumaAnterior = suma;
+		
+		// Reiniciamos el valor de la suma
+		suma = 0;
 		
 		// Bucle para comprobar las sumas de las filas
 		while (contadorFilas < tabla.length) {
