@@ -17,8 +17,7 @@ public class Ejercicio09 {
 
 	}
 
-	// Función que recibe una tabla bidimensional y devuelve si es matriz mágica o
-	// no
+	// Función que recibe una tabla bidimensional y devuelve si es matriz mágica o no
 	static boolean esMagica(int tabla[][]) {
 		// Variable donde se almacenará si es mágica
 		boolean magica = true;
