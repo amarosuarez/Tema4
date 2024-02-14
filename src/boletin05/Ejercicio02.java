@@ -32,8 +32,10 @@ public class Ejercicio02 {
 			numPos = password.compareTo(resp);			
 			
 			// Comprobamos que el numPos sea diferente de 0
-			if (numPos != 0) {
-				System.out.println("La contraseña es " + (numPos > 0 ? "mayor" : "menor") + " alfabéticamente");
+			while (numPos != 0) {
+				System.out.println("La contraseña es " + (numPos > 0 ? "mayor" : "menor") + " alfabéticamente\nVuelve a intentarlo:");
+				resp = sc.nextLine();
+				numPos = password.compareTo(resp);	
 			}
 			
 			

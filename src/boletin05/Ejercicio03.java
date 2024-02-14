@@ -1,5 +1,6 @@
 package boletin05;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio03 {
@@ -35,17 +36,13 @@ public class Ejercicio03 {
 	 * @return Número de espacios en la cadena
 	 */
 	static int numEspacios(String cadena) {
-		// Variable donde se almacenará el número de espacios
-		int num;
 		
 		// Separamos la cadena en partes
 		String[] palabras = cadena.split(" ");
 		
 		// El número de espacios será igual a la longitud de la tabla menos 1
-		num = palabras.length - 1;
-		
 		// Devolvemos el número de espacios
-		return num;
+		return palabras.length-1;
 	}
 	
 }

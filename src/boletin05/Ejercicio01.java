@@ -27,9 +27,9 @@ public class Ejercicio01 {
 			System.out.println("Ambas cadenas son igual de largas");
 		} else {
 			System.out.println(
-					"La cadena: " + 
+					"La cadena:\n\"" + 
 					(cadena1.length() < cadena2.length() ? cadena1 : cadena2) + 
-					" es más corta");
+					"\"\nes más corta");
 		}
 		
 		// Cerramos el Scanner
