@@ -16,9 +16,9 @@ public class Ejercicio08 {
 		System.out.println("Introduzca una cadena sin tildes");
 		cadena = sc.nextLine();
 		
-		// Llamamos a la función
+		// Llamamos a la función sin espacios
 		System.out.println(
-				"La palabra " + (esPalindroma(cadena) ? "es" : "no es") + " palíndroma"
+				"La frase " + (esPalindroma(cadena.replace(" ", "")) ? "es" : "no es") + " palíndroma"
 		);
 		
 		// Cerramos el Scanner
