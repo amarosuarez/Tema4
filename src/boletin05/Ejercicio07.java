@@ -6,6 +6,12 @@ public class Ejercicio07 {
 		System.out.println("" + numVeces("pedro juan juan amaroamaro", "amaro"));
 	}
 	
+	/**
+	 * Función que devuelve cuantas veces aparece una palabra
+	 * @param cadena Cadena donde se buscará la palabara
+	 * @param palabra Palabra a buscar la cadena
+	 * @return El número de veces que aparece
+	 */
 	static int numVeces(String cadena, String palabra) {
 		// Variable donde se almacenará el número de veces que aparece la palabra
 		int veces = 0;
