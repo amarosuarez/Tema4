@@ -1,5 +1,7 @@
 package boletin05;
 
+import java.util.Scanner;
+
 public class Ejercicio10 {
 
 	public static void main(String[] args) {
@@ -8,8 +10,30 @@ public class Ejercicio10 {
 		// Tabla de char conjunto2
 		char conjunto2[] = {'p', 'v', 'i', 'u', 'm', 't', 'e', 'r', 'k', 'q', 's'};
 		
-		// Llamamos a la función e imprimimos el carácter por pantalla
-		System.out.println(codifica(conjunto1, conjunto2, 'P'));
+		// Variable donde se almacenará la palabra
+		String palabra = "";
+		
+		// Variable donde se almacenará el caracter
+		char car = 0;
+		
+		// Creamos el Scanner
+		Scanner sc = new Scanner(System.in);
+		
+		// Le pedimos la palabra al usuario
+		System.out.println("Introduzca una palabra");
+		palabra = sc.nextLine();
+		
+		// Bucle que llama a la función pasando cada carácter según la posición en la cadena
+		for (int i = 0; i < palabra.length(); i++) {
+			// Obtenemos el caracter en la posición i de la cadena
+			car = palabra.charAt(i);
+			
+			// Llamamos a la función para mostrar el mensaje
+			System.out.print(codifica(conjunto1, conjunto2, car));
+		}
+		
+		// Cerramos el Scanner
+		sc.close();
 	}
 	
 	/**
