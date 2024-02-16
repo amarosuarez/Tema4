@@ -8,14 +8,11 @@ public class Ejercicio12 {
 		// Variable donde se almacenará la frase
 		String cadena = "";
 		
+		// Variable donde se almacenará la palabra más larga
+		String palabra = "";
+		
 		// Tabla donde se almacenarán las palabras de la frase
 		String[] tabla;
-		
-		// Variable donde se almacanerá la longitud de la palabra
-		int size;
-		
-		// Variable donde se almacenará la posición de la palabra en la tabla
-		int pos = 0;
 		
 		// Creamos el Scanner
 		Scanner sc = new Scanner(System.in);
@@ -27,24 +24,20 @@ public class Ejercicio12 {
 		// Dividamos la frase por espacios
 		tabla = cadena.split(" ");
 		
-		// Le asignamos el tamaño de la primera palabra
-		size = tabla[0].length();
+		// Le asignamos la primera palabra
+		palabra = tabla[0];
 		
 		// Bucle para recorrer la tabla
 		for (int i = 0; i < tabla.length; i++) {
-			
-			// Comprobamos la longitud de la palabra actual con la longitud almacenada
-			if (tabla[i].length() > size) {
-				// Actualizamos la longitud
-				size = tabla[i].length();
-				// Actualizamos la posición
-				pos = i;
+			// Comprobamos la longitud de la palabra actual con la longitud de la palabra almacenada
+			if (tabla[i].length() > palabra.length()) {
+				// Actualizamos la palabra
+				palabra = tabla[i];
 			}
-			
 		}
 		
 		// Mostramos la palabra más larga
-		System.out.println("La palabra más larga es: " + tabla[pos]);
+		System.out.println("La palabra más larga es: " + palabra);
 		
 		// Cerramos el Scanner
 		sc.close();
