@@ -9,11 +9,11 @@ public class Ejercicio10 {
 		char conjunto2[] = {'p', 'v', 'i', 'u', 'm', 't', 'e', 'r', 'k', 'q', 's'};
 		
 		// Llamamos a la función e imprimimos el carácter por pantalla
-		System.out.println(codifica(conjunto1, conjunto2, 'a'));
+		System.out.println(codifica(conjunto1, conjunto2, 'P'));
 	}
 	
 	/**
-	 * Función que obtiene dos tablas de char y un char y devuelve la codificación
+	 * Método que obtiene dos tablas de char y un char y devuelve la codificación
 	 * @param conjunto1 Tabla de char
 	 * @param conjunto2 Tabla de codificación
 	 * @param c Char a codificar
