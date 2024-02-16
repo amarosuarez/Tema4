@@ -31,9 +31,6 @@ public class Ejercicio13 {
 	}
 	
 	static boolean esAnagrama (String cadena1, String cadena2) {
-		// Variable que almacenará si es anagrama
-		boolean anagrama = false;
-		
 		// Array de char donde se almacenará la cadena1
 		char[] tabla1;
 		
@@ -41,18 +38,15 @@ public class Ejercicio13 {
 		char[] tabla2;
 		
 		// Convertimos las cadenas al array y las ordenamos
-		tabla1 = cadena1.toCharArray();
-		tabla2 = cadena2.toCharArray();
+		tabla1 = cadena1.replace(" ", "").toCharArray();
+		tabla2 = cadena2.replace(" ", "").toCharArray();
 		
 		// Ordenamos las tablas
 		Arrays.sort(tabla1);
 		Arrays.sort(tabla2);
 		
-		// Comparamos si una vez ordenados son iguales
-		if (Arrays.equals(tabla1, tabla2)) anagrama = true;
-		
 		// Devolvemos el boolean
-		return anagrama;
+		return Arrays.equals(tabla1, tabla2);
 	}
 
 }
