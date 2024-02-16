@@ -2,7 +2,7 @@ package boletin05;
 
 import java.util.Scanner;
 
-public class Ejercicio10 {
+public class Ejercicio10Corregido {
 
 	public static void main(String[] args) {
 		// Tabla de char conjunto1
@@ -22,7 +22,7 @@ public class Ejercicio10 {
 		
 		// Le pedimos la palabra al usuario
 		System.out.println("Introduzca una palabra");
-		palabra = sc.nextLine();
+		palabra = sc.nextLine().toLowerCase();
 		
 		// Bucle que llama a la función pasando cada carácter según la posición en la cadena
 		for (int i = 0; i < palabra.length(); i++) {
@@ -49,16 +49,25 @@ public class Ejercicio10 {
 		// Lo inicializo a c ya que si no se encuentra en el conjunto debe retornar el mimso caracter
 		char charCodificado = c;
 		
-		// Convertimos el char a String
-		String charToString = String.valueOf(c);
+		// Variable que determina si se he encontrado
+		boolean encontrado = false;
+		
+		// Contador
+		int i = 0;
 		
 		// Bucle para buscar el carácter en el primer conjunto y luego obtener el carácter codificado
-		for (int i = 0; i < conjunto1.length; i++) {
-			// Comprueba si el caracter es igual al de la posición
-			if (charToString.equalsIgnoreCase(String.valueOf(conjunto1[i]))) {
-				// Obtiene el caracter de la misma posición pero en el segundo conjunto
+		while (i < conjunto1.length && !encontrado) {
+			// Comprueba si es el mismo caracter
+			if (c == conjunto1[i]) {
+				// Obtenemos el caracter codificado
 				charCodificado = conjunto2[i];
+				
+				// Cambiamos el valor de encontrado a true
+				encontrado = true;
 			}
+			
+			// Aumentamos el contador
+			i++;
 		}
 		
 		// Devuelve el char codificado
