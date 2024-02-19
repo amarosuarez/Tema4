@@ -44,7 +44,12 @@ public class Ejercicio16 {
 		sc.close();
 	}
 	
-	
+	/**
+	 * Método que cuenta cuantas palabras coinciden en la misma posición
+	 * @param frase Frase base
+	 * @param resp Respuesta del usuario
+	 * @return Número de aciertos
+	 */
 	static int coinciden(String frase, String resp) {
 		// Variable donde se almacenará el número de letras acertadas
 		int num = 0;
