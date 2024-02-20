@@ -23,7 +23,7 @@ public class Ejercicio16 {
 		do {
 			System.out.println("Introduce una frase jugador 1");
 			frase = sc.nextLine();
-		} while (frase.equals(" "));
+		} while (frase.equals(""));
 		
 		do {
 			// Reordenamos la frase
@@ -61,7 +61,8 @@ public class Ejercicio16 {
 		char[] tablaResp = resp.toCharArray();
 		
 		for (int i = 0; i < tablaResp.length; i++) {
-			if (tablaResp[i] == tabla[i]) num++;
+			if (tablaResp[i] == tabla[i]) 
+				num++;
 		}
 		
 		// Devolvemos el número de letras acertadas

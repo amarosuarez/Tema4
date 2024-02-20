@@ -36,7 +36,8 @@ public class Ejercicio14b {
 			
 			// Bucle para recorrer la tabla nuevamente para comparar si las letras son iguales
 			for (int j = i; j < tablaLetras.length; j++) {
-				if (tablaLetras[i] == tablaLetras[j]) contador++;
+				if (tablaLetras[i] == tablaLetras[j]) 
+					contador++;
 			}
 			
 			// Comparamos la letra actual con la anterior para imprimir o no

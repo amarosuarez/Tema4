@@ -23,7 +23,7 @@ public class Ejercicio15 {
 		do {
 			System.out.println("Introduce una frase jugador 1");
 			frase = sc.nextLine();
-		} while (frase.equals(" "));
+		} while (frase.equals(""));
 		
 		do {
 			// Reordenamos la frase
