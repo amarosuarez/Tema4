@@ -53,8 +53,8 @@ public class Ejercicio15 {
 		// Tabla donde se almacenará los caracteres de la frase
 		char[] tabla;
 		
-		// Tabla donde se almacenarán las posiciones ya puestas
-		char[] posiciones;
+		// Tabla donde se almacenarán las letras ya puestas
+		char[] letras;
 		
 		// Variable donde se almacenará el número random generado
 		int random;
@@ -66,7 +66,7 @@ public class Ejercicio15 {
 		tabla = frase.toCharArray();
 		
 		// Le damos una longitud a la tabla posiciones
-		posiciones = new char[tabla.length];
+		letras = new char[tabla.length];
 		
 		// Ejecutamos mientras la frase random sea igual a la normal
 		do {
@@ -75,14 +75,15 @@ public class Ejercicio15 {
 				// Generamos un número aleatorio
 				do {
 					random = rand.nextInt(0, tabla.length);
-				} while (posiciones[random] != 0);
+				} while (letras[random] != 0);
 				
-				posiciones[random] = tabla[i];
+				// Guardamos la letra en una posición random de la tabla
+				letras[random] = tabla[i];
 			}
 			
-			for (int i = 0; i < posiciones.length; i++) {
-				randFrase += posiciones[i];
-			}
+			// Convertimos el array a cadena
+			randFrase = String.valueOf(letras);
+			
 		} while (randFrase.equals(frase));
 		
 		
