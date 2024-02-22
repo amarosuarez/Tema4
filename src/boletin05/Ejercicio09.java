@@ -3,6 +3,12 @@ package boletin05;
 import java.util.Scanner;
 
 public class Ejercicio09 {
+	
+	// Constante donde se almacena el primer dialecto
+	static String DIALECTO1 = "Javalín, javalón";
+	
+	// Constante donde se almacena el segundo dialecto
+	static String DIALECTO2 = "javalén, len, len";
 
     public static void main(String[] args) {
         // Variable donde se almacenará la cadena
@@ -42,15 +48,14 @@ public class Ejercicio09 {
      */
     public static String traducir(String cadena) {
     	
-        String dialecto1 = "Javalín, javalón";
-        String dialecto2 = "javalén, len, len";
+    	// Cadena donde se almacenará el resultado
         String resultado = cadena;
         
         // Si empieza o acaba en algún dialecto, extraemos la subcadena
-        if (cadena.startsWith(dialecto1)) {
-            resultado = cadena.substring(dialecto1.length()).trim();
-        } else if (cadena.endsWith(dialecto2)) {
-            resultado = cadena.substring(0, cadena.length() - dialecto2.length()).trim();
+        if (cadena.startsWith(DIALECTO1)) {
+            resultado = cadena.substring(DIALECTO1.length()).trim();
+        } else if (cadena.endsWith(DIALECTO2)) {
+            resultado = cadena.substring(0, cadena.length() - DIALECTO2.length()).trim();
         }
 
         // Devolvemos
