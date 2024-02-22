@@ -50,6 +50,9 @@ public class Ejercicio20 {
 		// Variable donde se almacena la longitud de la tabla
 		int longitud = palabra.length()/sec;
 		
+		// Contador
+		int cont = 0;
+		
 		// Comprobamos si la longitud es diferente que 1 ya que habrá que sumarle 1
 		if (longitud > 1)
 			longitud++;
@@ -62,9 +65,6 @@ public class Ejercicio20 {
 		
 		// Variable donde se almacenará la subcadena restante
 		String subRestante = palabra;
-		
-		// Contador
-		int cont = 0;
 		
 		// Bucle que me divide la palabra mientras la longitud de la subcadena restante sea mayor que la secuencia
 		do {
