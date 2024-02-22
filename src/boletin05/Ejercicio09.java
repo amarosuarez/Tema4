@@ -47,7 +47,6 @@ public class Ejercicio09 {
      * @return Cadena traducida
      */
     public static String traducir(String cadena) {
-    	
     	// Cadena donde se almacenará el resultado
         String resultado = cadena;
         
@@ -58,7 +57,7 @@ public class Ejercicio09 {
             resultado = cadena.substring(0, cadena.length() - DIALECTO2.length()).trim();
         }
 
-        // Devolvemos
+        // Devolvemos el resultado
         return resultado;
     }
 
